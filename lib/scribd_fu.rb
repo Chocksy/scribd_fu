@@ -173,6 +173,12 @@ module ScribdFu
         include ScribdFu::AttachmentFu::InstanceMethods
       end
 
+      # Load Shrine specific methods and files
+      def load_shrine
+        require 'scribd_fu/shrine'
+        include ScribdFu::Shrine::InstanceMethods
+      end
+
       # Load Paperclip specific methods and files
       def load_paperclip
         require 'scribd_fu/paperclip'
@@ -185,6 +191,8 @@ module ScribdFu
           load_attachment_fu
         elsif str == 'Paperclip'
           load_paperclip
+        elsif str == 'Shrine'
+          load_shrine
         else
           raise ScribdFuError, "Sorry, only Attachment_fu and Paperclip are supported."
         end
