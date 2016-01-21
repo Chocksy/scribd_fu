@@ -258,7 +258,7 @@ module ScribdFu
       view_width = options.has_key?(:width) ? "width='#{options.delete(:width)}'" : 'width="100%"'
 
       <<-END
-        <iframe class="scribd_iframe_embed" src="http://www.scribd.com/embeds/#{ipaper_id}/content?start_page=1&view_mode=#{view_mode}&access_key=#{ipaper_access_key}" #{view_height} scrolling="no" id="scribd_#{id}" #{view_width} frameborder="0"></iframe><script type="text/javascript">(function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "http://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();</script>
+        <iframe class="scribd_iframe_embed" src="https://www.scribd.com/embeds/#{ipaper_id}/content?start_page=1&view_mode=#{view_mode}&access_key=#{ipaper_access_key}" #{view_height} scrolling="no" id="scribd_#{id}" #{view_width} frameborder="0"></iframe><script type="text/javascript">(function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "http://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();</script>
       END
     end
 
