@@ -354,7 +354,7 @@ describe "Viewing an iPaper document" do
 
   it "should return this HTML by default" do
     pending "this is not supported because uses html5 version"
-    @document.display_ipaper.gsub(/\s{2,}/, "").should == "<script type=\"text/javascript\" src=\"http://www.scribd.com/javascripts/view.js\"></script><div id=\"embedded_flash\"></div><script type=\"text/javascript\">var scribd_doc = scribd.Document.getDoc(doc_id, 'access_key');scribd_doc.write(\"embedded_flash\");</script>\n"
+    @document.display_ipaper.gsub(/\s{2,}/, "").should == "<script type=\"text/javascript\" src=\"https://www.scribd.com/javascripts/view.js\"></script><div id=\"embedded_flash\"></div><script type=\"text/javascript\">var scribd_doc = scribd.Document.getDoc(doc_id, 'access_key');scribd_doc.write(\"embedded_flash\");</script>\n"
   end
 
   it "should allow custom alt text" do
